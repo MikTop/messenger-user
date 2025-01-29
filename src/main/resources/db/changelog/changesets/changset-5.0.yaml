@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1-1
+      author: Mikhail
+      changes:
+        - insert:
+            tableName: role
+            columns:
+              - column:
+                  name: name
+                  value: admin
+        - insert:
+            tableName: role
+            columns:
+              - column:
+                  name: name
+                  value: owner
+        - insert:
+            tableName: role
+            columns:
+              - column:
+                  name: name
+                  value: user

@@ -1,0 +1,86 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1-1
+      author: Mikhail
+      changes:
+        - insert:
+            tableName: right
+            columns:
+              - column:
+                  name: name
+                  value: deleteAnyMessage
+              - column:
+                  name: description
+                  value: delete message from any user
+        - insert:
+            tableName: right
+            columns:
+              - column:
+                  name: name
+                  value: deleteUserFromAnyChat
+              - column:
+                  name: description
+                  value: delete user from any chat
+        - insert:
+            tableName: right
+            columns:
+              - column:
+                  name: name
+                  value: blockUser
+              - column:
+                  name: description
+                  value: block user in any chat
+        - insert:
+            tableName: right
+            columns:
+              - column:
+                  name: name
+                  value: deleteAnyMessageinOwnerChat
+              - column:
+                  name: description
+                  value: delete message from any user in owner chat/channel
+        - insert:
+            tableName: right
+            columns:
+              - column:
+                  name: name
+                  value: deleteUserFromOwnerChat
+              - column:
+                  name: description
+                  value: delete user from owner chat/channel
+        - insert:
+            tableName: right
+            columns:
+              - column:
+                  name: name
+                  value: blockUserOwnerChat
+              - column:
+                  name: description
+                  value: block user in owner chat/channel
+        - insert:
+            tableName: right
+            columns:
+              - column:
+                  name: name
+                  value: deleteSelfMessageinAnyChat
+              - column:
+                  name: description
+                  value: delete self message from any chat/channel
+        - insert:
+            tableName: right
+            columns:
+              - column:
+                  name: name
+                  value: leaveChannelOrChat
+              - column:
+                  name: description
+                  value: leave from any chat/channel
+        - insert:
+            tableName: right
+            columns:
+              - column:
+                  name: name
+                  value: blockUserMessage
+              - column:
+                  name: description
+                  value: block messaage from user
