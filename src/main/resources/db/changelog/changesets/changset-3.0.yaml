@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1-1
+      author: Mikhail
+      changes:
+        - createTable:
+            tableName: right
+            columns:
+              - column:
+                  name: id
+                  type: SERIAL
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(120)
+                  constraints:
+                    unique: true
+                    nullable: false
+              - column:
+                  name: description
+                  type: varchar(512)
+                  constraints:
+                    nullable: false

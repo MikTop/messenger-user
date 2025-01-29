@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1-1
+      author: Mikhail
+      changes:
+        - createTable:
+            tableName: role_right
+            columns:
+              - column:
+                  name: id
+                  type: BIGSERIAL
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: role_id
+                  type: INT
+                  constraints:
+                    foreignKeyName: role_to_role_right
+              - column:
+                  name: right_id
+                  type: INT
+                  constraints:
+                    foreignKeyName: right_to_role_right
+        - addForeignKeyConstraint:
+            baseTableName: role_right
+            baseColumnNames: role_id
+            referencedTableName: role
+            referencedColumnNames: id
+            constraintName: role_to_role_right
+        - addForeignKeyConstraint:
+            baseTableName: role_right
+            baseColumnNames: right_id
+            referencedTableName: right
+            referencedColumnNames: id
+            constraintName: right_to_role_right
