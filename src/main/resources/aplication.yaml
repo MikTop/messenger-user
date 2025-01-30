@@ -1,0 +1,12 @@
+spring:
+  aplication:
+    name: user
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://ubuntu:5432/users?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: m
+    password: 123
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate

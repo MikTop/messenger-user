@@ -1,11 +1,18 @@
 package com.messenger.user.persistence.user.dao;
 
-import lombok.Data;
+import com.messenger.user.web.dto.CreateUserDto;
+import com.messenger.user.web.dto.UserDto;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Repository;
 
-import java.time.LocalDate;
-
-@Data
+@Repository
+@RequiredArgsConstructor
 public class UserDao {
+
+    public UserDto create (CreateUserDto user){
+
+        return null;
+    }
 
 
 

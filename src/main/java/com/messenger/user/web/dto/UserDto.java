@@ -1,14 +1,13 @@
 package com.messenger.user.web.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
-@Data
 @Builder
-public class CreateUserDto {
+@AllArgsConstructor
+public class UserDto {
 
     private String userName;
     private String password;
@@ -16,8 +15,6 @@ public class CreateUserDto {
     private String lastName;
     private LocalDate birthDDate;
     private Sex sex;
-    private Role role;
     private String phone;
     private String email;
-
 }
