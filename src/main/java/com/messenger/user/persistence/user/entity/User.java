@@ -2,7 +2,10 @@ package com.messenger.user.persistence.user.entity;
 
 import com.messenger.user.web.dto.Role;
 import com.messenger.user.web.dto.Sex;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -20,16 +23,30 @@ import java.time.LocalDateTime;
 public class User {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String userName;
+
+    private String username;
+
     private String password;
+
     private String firstName;
+
     private String lastName;
-    private LocalDate birthDDate;
+
+    private LocalDate birthDate;
+
+    @Column(name = "sex_id")
     private Sex sex;
+
+    @Column(name = "role_id")
     private Role role;
+
     private String phone;
+
     private String email;
+
     private boolean isDeleted ;
+
     private LocalDateTime lastChange;
 }
