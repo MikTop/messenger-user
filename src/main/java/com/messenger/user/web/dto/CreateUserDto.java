@@ -14,8 +14,8 @@ public class CreateUserDto {
     private String firstName;
     private String lastName;
     private LocalDate birthDDate;
-    private Sex sex;
-    private Role role;
+    private String sex;
+    private String role;
     private String phone;
     private String email;
 

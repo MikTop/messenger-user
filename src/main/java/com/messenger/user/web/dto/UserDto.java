@@ -10,11 +10,10 @@ import java.time.LocalDate;
 public class UserDto {
 
     private String userName;
-    private String password;
     private String firstName;
     private String lastName;
     private LocalDate birthDDate;
-    private Sex sex;
+    private String sex;
     private String phone;
     private String email;
 }

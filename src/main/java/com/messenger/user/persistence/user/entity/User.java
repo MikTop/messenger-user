@@ -10,11 +10,13 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+@Data
 @Builder
 @Entity
 @NoArgsConstructor
@@ -24,7 +26,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     private String username;
 
@@ -46,7 +48,7 @@ public class User {
 
     private String email;
 
-    private boolean isDeleted ;
+    private boolean isDeleted;
 
     private LocalDateTime lastChange;
 }
