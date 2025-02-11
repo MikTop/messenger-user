@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController()
 @RequestMapping("/api/v1/users")
 @RequiredArgsConstructor
@@ -45,13 +47,43 @@ public class UserController {
     }
 
     @GetMapping("/get")
-    public ResponseEntity<Object> getUser (SimpleUserSearchDto user){
+    public ResponseEntity<UserDto> getUser (@RequestBody SimpleUserSearchDto user){
         try {
-            userService.deleteUser(user);
-            return ResponseEntity.ok().build();
+            return ResponseEntity.ok(userService.getUser(user));
         }catch (Throwable e){
             log.error(ExceptionUtils.getStackTrace(e));
             return ResponseEntity.internalServerError().build();
         }
     }
+
+    @GetMapping()
+    public ResponseEntity<List<UserDto>> getUser (){
+        try {
+            return ResponseEntity.ok(userService.getAll());
+        }catch (Throwable e){
+            log.error(ExceptionUtils.getStackTrace(e));
+            return ResponseEntity.internalServerError().build();
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
